@@ -30,6 +30,9 @@ describe('multiply', () => {
   it('can multiply two numbers', () => {
     expect(helpers.multiply(2, 2)).toBe(4);
   });
+  it('throws error if either arg is not a number', () => {
+    expect(() => helpers.multiply(1, '2')).toThrow();
+  });
 });
 
 describe('personMaker', () => {

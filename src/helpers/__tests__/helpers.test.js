@@ -44,5 +44,24 @@ describe('personMaker', () => {
     });
   });
 
+  it('return undefined if no args passed in', () => {
+    expect(helpers.personMaker().age).toBe(undefined);
+    expect(helpers.personMaker().name).toBeUndefined();
+  });
   // write more tests! <===========================================
+});
+
+describe('checkValue', () => {
+  it('checks if value is falsy', () => {
+    expect(helpers.checkValue(null)).toBeFalsy();
+  });
+});
+
+describe('createUser', () => {
+  it('user should be Liam Sutton object', () => {
+    expect(helpers.createUser()).toEqual({
+      firstName: 'Liam',
+      lastName: 'Sutton'
+    });
+  });
 });

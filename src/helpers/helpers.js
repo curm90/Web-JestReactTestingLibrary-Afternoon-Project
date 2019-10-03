@@ -28,8 +28,17 @@ export function personMaker(name, age) {
   return {
     id: uuid(),
     name,
-    age,
+    age
   };
 }
 
 // BUILD YOUR OWN UTILITY FUNCTIONS AND TEST THEM OUT!
+export function checkValue(num) {
+  return num;
+}
+
+export function createUser() {
+  const user = { firstName: 'Liam' };
+  user['lastName'] = 'Sutton';
+  return user;
+}

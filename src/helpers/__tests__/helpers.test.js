@@ -27,17 +27,18 @@ describe('sum', () => {
 });
 
 describe('multiply', () => {
-  // write tests! <================================================
+  it('can multiply two numbers', () => {
+    expect(helpers.multiply(2, 2)).toBe(4);
+  });
 });
 
 describe('personMaker', () => {
   it('makes a person with name and age', () => {
-    expect(helpers.personMaker('peter', 4))
-      .toMatchObject({
-        id: '123',
-        name: 'peter',
-        age: 4,
-      });
+    expect(helpers.personMaker('peter', 4)).toMatchObject({
+      id: '123',
+      name: 'peter',
+      age: 4
+    });
   });
 
   // write more tests! <===========================================

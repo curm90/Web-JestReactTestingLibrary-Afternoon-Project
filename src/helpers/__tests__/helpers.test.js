@@ -65,3 +65,18 @@ describe('createUser', () => {
     });
   });
 });
+
+it('should be less than or equal 2000', () => {
+  const loadOne = 800;
+  const loadTwo = 700;
+  expect(loadOne + loadTwo).toBeLessThanOrEqual(2000);
+});
+
+it('There is no i in team', () => {
+  expect('team').not.toMatch(/i/);
+});
+
+it('Liam should be in names', () => {
+  const names = ['john', 'liam', 'gabe'];
+  expect(names).toContain('liam');
+});
